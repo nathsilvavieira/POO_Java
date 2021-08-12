@@ -1,20 +1,13 @@
 package POO_DH.aula2;
 
 public class Funcao_NumPrimo {
-    int num;
-    int contador;
-
 
     public boolean eNumPrimo(int num) {
-        for (int i = 1; i <= num; i++) {
-            if (num % i == 0) {
-                contador++;
-            }
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0)
+                return false;
         }
-        if (contador == 2)
-            return true;
-        return false;
-
+        return true;
     }
 }
 

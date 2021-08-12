@@ -10,10 +10,17 @@ public class Ex01 {
     // Para resolvê-lo, use a função obtida no exercício desenvolvido na aula assíncrona, Boolean e Divisível (int n, int divisor).
 
     public static void main(String[] args) {
+
     Funcao_NumPrimo funcao = new Funcao_NumPrimo();
 
-    System.out.println(funcao.eNumPrimo(13));
-    System.out.println(funcao.eNumPrimo(15));
+    System.out.println(funcao.eNumPrimo(13)); // true
+    System.out.println(funcao.eNumPrimo(15)); //false
+    System.out.println(funcao.eNumPrimo(17)); //true
+    System.out.println(funcao.eNumPrimo(25)); //false
+    System.out.println(funcao.eNumPrimo(2)); //true
+    System.out.println(funcao.eNumPrimo(30)); //false
+
+
 
     }
 }
