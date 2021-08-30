@@ -1,5 +1,7 @@
 package POO_DH.aula10;
 
+import java.util.Objects;
+
 public class Nave extends Objeto{
     private double velocidade;
     private int vida;
@@ -32,11 +34,46 @@ public class Nave extends Objeto{
         }
 
     }
+
+
+    public double getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
     public int setVida(int vida){
         return this.vida = vida;
     }
 
     public String restaVida(int valor){
         return "Resta " + (this.vida = valor-1) + "vidas";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Nave nave = (Nave) o;
+        return Double.compare(nave.velocidade, velocidade) == 0 && vida == nave.vida;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(velocidade, vida);
+    }
+
+    @Override
+    public String toString() {
+        return "Nave{" +
+                "velocidade=" + velocidade +
+                ", vida=" + vida +
+                '}';
     }
 }
